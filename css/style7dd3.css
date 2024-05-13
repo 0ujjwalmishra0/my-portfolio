@@ -347,6 +347,7 @@ button.activebtn {
   border-color: rgba(255, 255, 255, 0.3);
 }
 .resumo_fn_right .abs_img {
+
   position: absolute;
   z-index: 1;
   left: 0;
@@ -399,8 +400,8 @@ button.activebtn {
   min-height: 36px;
   position: relative;
 }
-/* 
-.scrolled .resumo_fn_right{
+
+/* .scrolled .resumo_fn_right{
   display: none;
   width: 0%;
 } */
@@ -422,9 +423,7 @@ button.activebtn {
 .resumo_fn_left.scrolled {
   width: 100%;
 }
-.scrolled .resumo_fn_left{
-  width: 70%;
-}
+
 .scrolled .resumo_fn_right .title_holder h3 {
   font-weight: 400;
 }
@@ -2533,7 +2532,10 @@ button.activebtn {
 }
 @media (max-width: 768px) {
   .resumo_fn_right .right_in {
-    padding: 100px 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .resumo_fn_contact .item.half {
     width: 100%;
@@ -3322,4 +3324,44 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
   .fn__nav .text {
     display: none;
   }
+}
+
+
+* {box-sizing: border-box;}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }
