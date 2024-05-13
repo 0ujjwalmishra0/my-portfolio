@@ -1647,6 +1647,9 @@ button.activebtn {
 }
 .resumo_fn_partners {
   margin-bottom: 139px;
+  /* max-width: 50px; */
+  border-radius: 50%;
+  /* object-fit: cover;  */
 }
 .resumo_fn_partners ul {
   margin: 0;
@@ -1666,9 +1669,9 @@ button.activebtn {
   flex-wrap: wrap;
 }
 .resumo_fn_partners li {
-  margin: 0;
+  margin: 30px;
   padding: 0;
-  width: 33.3333%;
+  width: 15%S;
   padding-left: 10px;
   margin-bottom: 10px;
 }
@@ -1682,16 +1685,18 @@ button.activebtn {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  height: 200px;
+  height: 120px;
+  width: 120px;
   padding: 15px;
   text-align: center;
   background-color: #181715;
+  border-radius: 100%
 }
 .resumo_fn_partners a:hover {
   background-color: #111;
 }
 .resumo_fn_partners img {
-  max-width: 180px;
+  max-width: 50px;
 }
 .resumo_fn_testimonials .my__nav {
   margin-bottom: 60px;
