@@ -356,7 +356,29 @@ button.activebtn {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
+/* This will ensure the icon is positioned correctly and looks good on all devices */
+@media (max-width: 768px) {
+  .menu-icon {
+      width: 30px; /* Adjust the size as necessary */
+      height: 30px; /* Adjust the size as necessary */
+      position: absolute; /* or 'fixed' depending on your layout */
+      top: 10px; /* Adjust the position as necessary */
+      right: 10px; /* Adjust the position as necessary */
+  }
+  .img_holder {
+      width: 100%; 
+      align-self: center;
+  }
+  .title_holder h5, .title_holder h3 {
+    font-size: smaller; /* Smaller font size on smaller screens */
+}
+}
+
 .resumo_fn_right .title_holder {
   text-align: center;
   padding: 27px 0 20px;
@@ -377,8 +399,8 @@ button.activebtn {
   min-height: 36px;
   position: relative;
 }
-
-/* .scrolled .resumo_fn_right{
+/* 
+.scrolled .resumo_fn_right{
   display: none;
   width: 0%;
 } */
@@ -400,7 +422,9 @@ button.activebtn {
 .resumo_fn_left.scrolled {
   width: 100%;
 }
-
+.scrolled .resumo_fn_left{
+  width: 70%;
+}
 .scrolled .resumo_fn_right .title_holder h3 {
   font-weight: 400;
 }
@@ -511,7 +535,7 @@ button.activebtn {
   position: absolute;
   z-index: 55;
   text-decoration: none;
-  color: #ddd;
+  /* color: #ddd; */
   right: 50px;
   top: 40px;
 }
@@ -1656,10 +1680,6 @@ button.activebtn {
   padding: 0;
   list-style-type: none;
   margin-left: -10px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
@@ -1667,19 +1687,26 @@ button.activebtn {
   -o-flex-direction: row;
   flex-direction: row;
   flex-wrap: wrap;
+  /* justify-content: space-around; */
 }
-.resumo_fn_partners li {
+/* .resumo_fn_partners li {
   margin: 30px;
   padding: 0;
-  width: 15%S;
+  width: 15%;
   padding-left: 10px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+} */
+
+.resumo_fn_partners li {
+  flex: 0 1 15%; /* Adjust flex-basis to 45% and allow growing and shrinking */
+  margin: 15px 0; /* Vertical margin only */
+  display: flex;
+  justify-content: center;
 }
+
 .resumo_fn_partners a {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   -ms-align-items: center;
   align-items: center;
@@ -1690,13 +1717,37 @@ button.activebtn {
   padding: 15px;
   text-align: center;
   background-color: #181715;
-  border-radius: 100%
+  border-radius: 100%;
+  overflow: hidden;
 }
 .resumo_fn_partners a:hover {
   background-color: #111;
 }
 .resumo_fn_partners img {
   max-width: 50px;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .resumo_fn_partners li {
+    flex: 0 1 45%; /* Keep two items per row on tablets */
+  }
+  .resumo_fn_partners a {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumo_fn_partners li {
+    flex: 0 1 25%; /* Keep two items per row on mobiles */
+  }
+  .resumo_fn_partners a {
+    height: 80px;
+    width: 80px;
+  }
+  .resumo_fn_partners img {
+    max-width: 70%;
+  }
 }
 .resumo_fn_testimonials .my__nav {
   margin-bottom: 60px;
@@ -2445,7 +2496,7 @@ button.activebtn {
   }
   .resumo_fn_right .right_in {
     height: auto !important;
-    display: none;
+    /* display: none; */
   }
   .resumo_fn_left {
     min-width: 100%;
@@ -2898,8 +2949,15 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
 }
 @media (max-width: 768px) {
   body.light .resumo_fn_right .menu_trigger {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  body.light .resumo_fn_right .menu_trigger {
+    background-color: #ffffff;
+    border: none;
   }
 }
 .resumo_fn_modalbox {
