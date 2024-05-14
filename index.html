@@ -24,26 +24,46 @@
 </head>
 
 <body class="light">
-    <!-- <header>
+    <header>
         <nav>
-            <div class="menu">
-                
-                <div class="switch">
-                    <input type="checkbox" id="darkModeToggle">
-                    <label class="slider" for="darkModeToggle"></label>
-                </div>
-                
-                <a href="#" class="menu_trigger">
-                    <span class="text"></span>
-                    <span class="hamb">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <label class="switch">
+                <input type="checkbox" class="switch__input" id="darkModeToggle">
+                <span class="switch__inner">
+                    <span class="switch__inner-icons">
+                        <svg class="switch__icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="14" fill="#FFD700" />
+                            <g stroke="#FFD700" stroke-width="4">
+                                <line x1="32" y1="2" x2="32" y2="10" />
+                                <line x1="32" y1="54" x2="32" y2="62" />
+                                <line x1="2" y1="32" x2="10" y2="32" />
+                                <line x1="54" y1="32" x2="62" y2="32" />
+                                <line x1="11" y1="11" x2="17" y2="17" />
+                                <line x1="47" y1="47" x2="53" y2="53" />
+                                <line x1="11" y1="53" x2="17" y2="47" />
+                                <line x1="47" y1="17" x2="53" y2="11" />
+                            </g>
+                        </svg>
+                        <svg class="switch__icon moon" width="20px" height="20px" viewBox="0 0 24 24" fill="#FFD700"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.3986 7.64605C13.495 7.37724 13.88 7.37724 13.9764 7.64605L14.2401 8.38111C14.271 8.46715 14.3395 8.53484 14.4266 8.56533L15.1709 8.82579C15.443 8.92103 15.443 9.30119 15.1709 9.39644L14.4266 9.65689C14.3395 9.68738 14.271 9.75507 14.2401 9.84112L13.9764 10.5762C13.88 10.845 13.495 10.845 13.3986 10.5762L13.1349 9.84112C13.104 9.75507 13.0355 9.68738 12.9484 9.65689L12.2041 9.39644C11.932 9.30119 11.932 8.92103 12.2041 8.82579L12.9484 8.56533C13.0355 8.53484 13.104 8.46715 13.1349 8.38111L13.3986 7.64605Z"
+                                fill="#FFD700" />
+                            <path
+                                d="M16.3074 10.9122C16.3717 10.733 16.6283 10.733 16.6926 10.9122L16.8684 11.4022C16.889 11.4596 16.9347 11.5047 16.9928 11.525L17.4889 11.6987C17.6704 11.7622 17.6704 12.0156 17.4889 12.0791L16.9928 12.2527C16.9347 12.2731 16.889 12.3182 16.8684 12.3756L16.6926 12.8656C16.6283 13.0448 16.3717 13.0448 16.3074 12.8656L16.1316 12.3756C16.111 12.3182 16.0653 12.2731 16.0072 12.2527L15.5111 12.0791C15.3296 12.0156 15.3296 11.7622 15.5111 11.6987L16.0072 11.525C16.0653 11.5047 16.111 11.4596 16.1316 11.4022L16.3074 10.9122Z"
+                                fill="#FFD700" />
+                            <path
+                                d="M17.7693 3.29184C17.9089 2.90272 18.4661 2.90272 18.6057 3.29184L19.0842 4.62551C19.1288 4.75006 19.2281 4.84805 19.3542 4.89219L20.7045 5.36475C21.0985 5.50263 21.0985 6.05293 20.7045 6.19081L19.3542 6.66337C19.2281 6.7075 19.1288 6.80549 19.0842 6.93005L18.6057 8.26372C18.4661 8.65284 17.9089 8.65284 17.7693 8.26372L17.2908 6.93005C17.2462 6.80549 17.1469 6.7075 17.0208 6.66337L15.6705 6.19081C15.2765 6.05293 15.2765 5.50263 15.6705 5.36475L17.0208 4.89219C17.1469 4.84805 17.2462 4.75006 17.2908 4.62551L17.7693 3.29184Z"
+                                fill="#FFD700" />
+                            <path
+                                d="M3 13.4597C3 17.6241 6.4742 21 10.7598 21C14.0591 21 16.8774 18.9993 18 16.1783C17.1109 16.5841 16.1181 16.8109 15.0709 16.8109C11.2614 16.8109 8.17323 13.8101 8.17323 10.1084C8.17323 8.56025 8.71338 7.13471 9.62054 6C5.87502 6.5355 3 9.67132 3 13.4597Z"
+                                stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <!-- <svg class="switch__icon moon" fill="#FFD700" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg> -->
                     </span>
-                </a>
-            </div>
+                </span>
+            </label>
         </nav>
-    </header> -->
+    </header>
     <!-- Wrapper All -->
     <div class="resumo_fn_wrapper">
         <!-- MODALBOX -->
@@ -86,7 +106,7 @@
                                         bridge the gap between technical functionality and aesthetic appeal, creating
                                         intuitive and engaging digital experiences that resonate with users worldwide.
                                     </p>
-                                    <img src="img/signature.png" alt="" style="height: 100px; width: 400px;">
+                                    <img id="signature-img" src="img/signature.png" alt="" style="height: 100px; width: 400px;">
                                 </div>
                                 <!-- /Main Title -->
                             </div>
@@ -168,13 +188,17 @@
                                                             </div>
                                                             <h3>Software Developer</h3>
                                                             <ul>
-                                                                <li>Spearheaded the lifecycle management of Paytm
-                                                                    Payments Bank products, directly impacting over
-                                                                    <b>35 million bank customers</b>
+                                                                <li>
+                                                                    <p>Spearheaded the lifecycle management of Paytm
+                                                                        Payments Bank products, directly impacting over
+                                                                        <b>35 million bank customers</b>
+                                                                    </p>
                                                                 </li>
-                                                                <li>Implemented dynamic and database-driven
-                                                                    notifications, enhancing system flexibility and
-                                                                    scalability.</li>
+                                                                <li>
+                                                                    <p>Implemented dynamic and database-driven
+                                                                        notifications, enhancing system flexibility and
+                                                                        scalability.</p>
+                                                                </li>
                                                                 <li>Optimized mandate presentation, resulting in a
                                                                     <b>30% reduction</b> in end-of-day sweep-out cases.
                                                                 </li>
@@ -332,7 +356,7 @@
 
                                             <button class="activebtn" style="width: 100%; float: left; clear: both;"><a
                                                     href="https://github.com/0ujjwalmishra0/fitness-app"
-                                                    target="_blank">Link to Full Project (Figma)</a></button>
+                                                    target="_blank">Link to Full Project (Github)</a></button>
 
                                         </div>
                                     </div>
@@ -359,7 +383,7 @@
 
                                             <button class="activebtn" style="width: 100%; float: left; clear: both;"><a
                                                     href="https://github.com/0ujjwalmishra0/social-app"
-                                                    target="_blank">Link to Full Project (Figma)</a></button>
+                                                    target="_blank">Link to Full Project (Github)</a></button>
 
                                         </div>
                                     </div>
@@ -378,14 +402,14 @@
                                             <h3 class="fn__title">Portfolio Website</h3>
                                             <div class="img_holder">
                                                 <img src="img/thumb/square.jpg" alt="">
-                                                <div class="abs_img" data-bg-img="img/thumb/Thumbnail_Portfolio.png" width="50%"
-                                                    height="50%"></div>
+                                                <div class="abs_img" data-bg-img="img/thumb/Thumbnail_Portfolio.png"
+                                                    width="50%" height="50%"></div>
                                             </div>
                                             <!-- CONTENT FOR PROJECT -->
 
                                             <button class="activebtn" style="width: 100%; float: left; clear: both;"><a
                                                     href="https://0ujjwalmishra0.github.io/my-portfolio/"
-                                                    target="_blank">Link to Full Project (Figma)</a></button>
+                                                    target="_blank">Link to Full Project (Github)</a></button>
 
                                         </div>
                                     </div>
@@ -422,12 +446,14 @@
                                         </li>
                                         <li><a href="" target="_blank"><img src="img/partners/dark/c_plus.svg"
                                                     alt="C++"></a></li>
+                                        <li><a href="" target="_blank"><img src="img/partners/dark/Golang.svg"
+                                                    alt="Golang"></a></li>
                                         <li><a href="" target="_blank"><img src="img/partners/dark/css3.png"
                                                     alt="CSS"></a></li>
                                         <li><a href="" target="_blank"><img src="img/partners/dark/html5.png"
                                                     alt="HTML"></a></li>
-                                        <li><a href="" target="_blank"><img src="img/partners/dark/javascript.svg"
-                                                    alt="Javascript"></a></li>
+                                        <li><a href="" target="_blank"><img width="50%" height="50%"
+                                                    src="img/partners/dark/javascript.svg" alt="Javascript"></a></li>
                                         <li><a href="" target="_blank"><img src="img/partners/dark/flutter.svg"
                                                     alt="Flutter"></a></li>
                                         <li><a href="" target="_blank"><img src="img/partners/dark/mysql-logo-1.png"
@@ -530,9 +556,7 @@
                                 <!-- Contact Form -->
                                 <form class="contact_form" action="mailto:0ujjwalmishra0@gmail.com" method="post"
                                     enctype="text/plain" autocomplete="off">
-                                    <div class="success" style="display:none;" id="success_message">
-                                        Your message has been sent successfully.
-                                    </div>
+
                                     <div class="empty_notice"><span>Please Fill Required Fields!</span></div>
 
                                     <div class="items_wrap">
@@ -606,25 +630,28 @@
                                 <span class="animated_title">
                                     <span class="title_in">Ujjwal Kumar</span>
                                     <span class="title_in">Software Developer</span>
-                                    <span class="title_in">I know Java</span>
-                                    <span class="title_in">I am learning</span>
-                                </span>
+                                    <span class="title_in">I am learning Golang</span>
+                                    <span class="title_in">Passonate about Problem Solving</span>
+                                  </span>
+                                  
                             </h3>
                         </div>
                     </div>
-                    <div style="display: flex; justify-content: center;">
+                    <div style="display: flex; justify-content: center; gap: 20px;">
                         <a href="https://www.linkedin.com/in/0ujjwalmishra0/" target="_blank">
-                            <img src="img/social/linkedin.svg">
+                            <img src="img/social/linkedin.svg" alt="linkedin" style="width: 40px; height: 40px;">
                         </a>
                         <a href="https://github.com/0ujjwalmishra0" target="_blank">
-                            <img src="img/social/github.svg" alt="github" />
-                        </a>
-                        <a href="https://codeforces.com/profile/ichuu05" target="_blank">
-                            <img src="img/social/code-forces.svg" alt="codeforces">
+                            <img src="img/social/github.svg" alt="github" style="width: 40px; height: 40px;">
                         </a>
                         <a href="https://www.leetcode.com/0ujjwalmishra0" target="_blank">
-                            <img src="img/social/leetcode-2.svg" alt="leetcode"></a>
+                            <img src="img/social/leetcode-2.svg" alt="leetcode" style="width: 35px; height: 35px;">
+                        </a>
+                        <!-- <a href="https://codeforces.com/profile/ichuu05" target="_blank">
+                            <img src="img/social/code-forces.svg" alt="codeforces" style="width: 40px; height: 40px;"> -->
+                        </a>
                     </div>
+                    
                 </div>
                 <!-- /Panel Content -->
             </div>
@@ -693,8 +720,14 @@
         </footer>
         <!-- /Footer -->
         <!-- Scripts -->
+        <script data-cfasync="false"
+            src="../../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="js/jquery7dd3.js?ver=4"></script>
+        <script src="js/typed7dd3.js?ver=4"></script>
         <script src="js/owl-carousel7dd3.js?ver=4"></script>
+        <script src="js/waypoints7dd3.js?ver=4"></script>
+        <script src="js/nicescroll7dd3.js?ver=4"></script>
+        <!--[if lt IE 10]> <script src="js/ie8.js?ver=4"></script> <![endif]-->
         <script src="js/init7dd3.js?ver=4"></script>
         <!-- /Scripts -->
 
@@ -744,25 +777,32 @@
             });
         </script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggleSwitch = document.querySelector('#darkModeToggle');
-                toggleSwitch.addEventListener('change', function () {
-                    document.body.classList.toggle('dark', toggleSwitch.checked);
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggleSwitch = document.querySelector("#darkModeToggle");
+                const currentTheme = localStorage.getItem("theme");
+                const signatureImg = document.getElementById('signature-img');
 
-                    // Optionally, save the theme preference to localStorage
+                if (currentTheme) {
+                    document.body.classList.add(currentTheme);
+                    if (currentTheme === "dark") {
+                        toggleSwitch.checked = true;
+                        signatureImg.src = 'img/signature-dark.png';
+                    }
+                }
+
+                toggleSwitch.addEventListener("change", () => {
                     if (toggleSwitch.checked) {
-                        localStorage.setItem('theme', 'dark');
+                        document.body.classList.add("dark");
+                        localStorage.setItem("theme", "dark");
+                        signatureImg.src = 'img/signature-dark.png';
                     } else {
-                        localStorage.setItem('theme', 'light');
+                        document.body.classList.remove("dark");
+                        localStorage.setItem("theme", "light");
+                        signatureImg.src = 'img/signature.png';
                     }
                 });
-
-                // Check the stored theme in localStorage and update the toggle switch
-                if (localStorage.getItem('theme') === 'dark') {
-                    toggleSwitch.checked = true;
-                    document.body.classList.add('dark');
-                }
             });
+
         </script>
 
 

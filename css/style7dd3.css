@@ -76,9 +76,9 @@ body.dark h6 {
 }
 
 /* Link colors in dark mode for better visibility */
-body.dark a {
-  color: #76c7c0; /* Light blue for better visibility */
-}
+/* body.dark a {
+  color: #76c7c0; 
+} */
 
 /* Adjustments for specific section backgrounds if necessary */
 body.dark section,
@@ -2580,6 +2580,9 @@ button.activebtn {
   h6 {
     font-size: 14px;
   }
+  p{
+    font-size: 12px;
+  }
   .resumo_fn_contact_info h3 {
     max-width: 100%;
   }
@@ -3327,41 +3330,121 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
 }
 
 
-* {box-sizing: border-box;}
+/* Assuming each icon is within a div with a class 'icon' */
+.icon:nth-child(5) img {
+  transform: scale(1.5); /* Adjust scale as needed */
+  transition: transform 0.3s ease-in-out;
+}
 
-.checkbox {
+.switch {
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.switch input { 
   opacity: 0;
-  position: absolute;
+  width: 0;
+  height: 0;
 }
-
-.checkbox-label {
-  background-color: #111;
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
+.switch__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
-
-.fa-moon {color: #f1c40f;}
-
-.fa-sun {color: #f39c12;}
-
-.checkbox-label .ball {
-  background-color: #fff;
-  width: 22px;
-  height: 22px;
+.switch__inner-icons {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.switch__icon {
   position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.switch__icon.sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.switch__icon.moon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+.switch input:checked + .switch__inner .switch__icon.sun {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.switch input:checked + .switch__inner .switch__icon.moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark .resumo_fn_boxed_list .item{
+  background-color: #121212;
+}
+body.dark .resumo_fn_boxed_list .item li {
+  color: #aaa7a7;
+}
+body.dark .resumo_fn_main_title,
+body.dark h1, body.dark h2, body.dark h3,
+body.dark h4, body.dark h5, body.dark h6{
+  color: #ffffff;
 }
 
-.checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
+body.dark section, body.dark .resumo_fn_page,
+body.dark .resumo_fn_left, body.dark .resumo_fn_content {
+  background-color: #1a1a1a;
+}
+body.dark input, body.dark textarea {
+  background-color: #333;
+  color: #ccc;
+  border-color: #555;
+}
+body.dark .resumo_fn_navigation, body.dark .resumo_fn_right {
+  background-color: #333;
+}
+body.dark .resumo_fn_testimonials .subtitle {
+  color: #bdbdbd;
+}
+body.dark .resumo_fn_about_info table th {
+  color: #ffffff;
+}
+body.dark .resumo_fn_about_info {
+  color: #fcfcfc;
+}
+
+body.dark .resumo_fn_right .menu_trigger .hamb span {
+  background-color: #ffffff;
+}
+
+body.dark #nav ul a {
+  color: #ffffff;
+}
+
+body.dark .resumo_fn_navigation .copyright a {
+  color: #ffffff;
+}
+
+body.dark #portfolio .title_holder h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body.dark #portfolio .title_holder h3 p {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+body.light .resumo_fn_about_info th:nth-child(1) {
+  color: #bdbdbd;
 }
