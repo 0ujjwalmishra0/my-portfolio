@@ -3407,15 +3407,15 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
 }
   .switch__inner-icons {
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
   .switch__icon {
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     transition: opacity 0.5s, transform 0.5s;
   }
 }
