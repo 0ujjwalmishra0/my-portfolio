@@ -754,29 +754,37 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var rightPanel = document.querySelector('.resumo_fn_right');
-                var leftPanel = document.querySelector('.resumo_fn_left'); // Get the left panel if needed
-                var aboutMe = document.getElementById('experience');
-                var aboutMeOffsetTop = aboutMe.offsetTop - 500; // Top position of the About Me section
+                if (window.innerWidth > 768) {  // Adjust the width threshold as needed
+                    var rightPanel = document.querySelector('.resumo_fn_right');
+                    var leftPanel = document.querySelector('.resumo_fn_left'); // Get the left panel if needed
+                    var aboutMe = document.getElementById('experience');
+                    var aboutMeOffsetTop = aboutMe.offsetTop - 500; // Top position of the About Me section
 
-                window.addEventListener('scroll', function () {
-                    var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                    window.addEventListener('scroll', function () {
+                        var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-                    // Toggle .scrolled class based on scroll position relative to About Me section
-                    if (currentScrollPos > aboutMeOffsetTop) {
-                        rightPanel.classList.add('scrolled');
-                        leftPanel.classList.add('scrolled'); // Apply scrolled to left panel if needed
-                    } else {
-                        rightPanel.classList.remove('scrolled');
-                        leftPanel.classList.remove('scrolled'); // Remove scrolled from left panel if needed
-                    }
-                });
+                        // Toggle .scrolled class based on scroll position relative to About Me section
+                        if (currentScrollPos > aboutMeOffsetTop) {
+                            rightPanel.classList.add('scrolled');
+                            leftPanel.classList.add('scrolled'); // Apply scrolled to left panel if needed
+                        } else {
+                            rightPanel.classList.remove('scrolled');
+                            leftPanel.classList.remove('scrolled'); // Remove scrolled from left panel if needed
+                        }
+                    });
 
-                window.addEventListener('resize', function () {
-                    aboutMeOffsetTop = aboutMe.offsetTop; // Recalculate when window is resized
-                });
+                    window.addEventListener('resize', function () {
+                        if (window.innerWidth > 768) {  // Recheck the width on resize
+                            aboutMeOffsetTop = aboutMe.offsetTop - 500; // Recalculate when window is resized
+                        } else {
+                            rightPanel.classList.remove('scrolled');
+                            leftPanel.classList.remove('scrolled');
+                        }
+                    });
+                }
             });
         </script>
+
 
         <script>
             document.addEventListener('keydown', function (event) {
